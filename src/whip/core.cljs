@@ -2,8 +2,7 @@
   (:require [reagent.core :as reagent]
             [clojure.string :as string]))
 
-(def last-id
-  (atom 3))
+(def last-id (atom 3))
 
 (defn get-next-id []
   (swap! last-id inc))
@@ -12,12 +11,9 @@
   (reagent/atom 
    {:title "Build Whip"
     :stories {1 {:title "Design a data model for projects and stories"
-                 :status "done"
-                 :order 1}
-              2 {:title "Create a story title entry form"
-                 :order 2}
-              3 {:title "Implement a way to finish stories"
-                 :order 3}}}))
+                 :status "done"}
+              2 {:title "Create a story title entry form"}
+              3 {:title "Implement a way to finish stories"}}}))
 
 (defn done-handler [story-id]
   (fn [e]
