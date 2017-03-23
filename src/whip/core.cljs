@@ -48,6 +48,7 @@
   [:div
    [:input {:type "text"
             :value @tmp-story-title
+            :auto-focus true
             :placeholder "Add a story..."
             :on-change update-tmp-story-title
             :on-key-down #(case (.-which %)
